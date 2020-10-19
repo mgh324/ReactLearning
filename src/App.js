@@ -19,10 +19,16 @@ class App extends Component {
     });
   };
   render() {
+    const style = {
+      border: "1px solid  blue",
+      cursor: "pointer",
+    };
     return (
       <div className="App">
         <h1>"Hi,I am a react app"</h1>
-        <button onClick={this.switchNameHandler}>Switch name </button>
+        <button style={style} onClick={this.switchNameHandler}>
+          Switch name{" "}
+        </button>
         <Person
           name={this.state.persons[0].name}
           age={this.state.persons[0].age}
